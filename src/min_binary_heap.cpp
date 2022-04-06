@@ -46,7 +46,7 @@ namespace assignment {
     sift_up(size_ - 1);
     return true;
     // Tips:
-    // 1. Вставьте новый узел в "конец" массива.(по индексу сайз)
+    // 1. Вставьте новый узел в "конец" массива.
     // 2. Увеличьте размер двоичной кучи.
     // 3. Вызовите операцию sift_up над индексом вставленного элемента.
   }
@@ -137,8 +137,7 @@ namespace assignment {
     //  поднимаем "наверх" узел - меняем местами нижний и верхний узлы (swap)
     //  index = индекс родительского узла
 
-    while (index != 0 && data_[index].key < data_[parent_index(index)].key) {//пока не дошли до корневого,ключ сравниваем с ключом родителя,если меньше,то меняем(3 перменную и с пмощью нее меняем или стд свап
-
+    while (index != 0 && data_[index].key < data_[parent_index(index)].key) {
       std::swap(data_[index], data_[parent_index(index)]);
       index = parent_index(index);
     }
